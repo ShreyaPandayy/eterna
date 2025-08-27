@@ -1,0 +1,116 @@
+/* ====== Navbar Container ====== */
+.gpt3__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 50px;
+    background: #0c0c0c;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* ====== Logo ====== */
+.logo-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #00d9f5;
+    letter-spacing: 1.5px;
+}
+
+/* ====== Links ====== */
+.gpt3__navbar-links_container {
+    display: flex;
+    gap: 28px;
+}
+
+.gpt3__navbar-links_container a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.gpt3__navbar-links_container a:hover {
+    color: #00f5a0;
+}
+
+/* ====== Get Started Button ====== */
+.get-started-btn {
+    padding: 16px 42px;
+    /* bigger size */
+    font-size: 1.2rem;
+    /* larger text */
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    /* rounded pill style */
+    background: linear-gradient(90deg, #00f5a0, #00d9f5, #0061f2);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 20px rgba(0, 217, 245, 0.4);
+    letter-spacing: 0.7px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover effect */
+.get-started-btn:hover {
+    transform: scale(1.12);
+    box-shadow: 0 8px 28px rgba(0, 217, 245, 0.7);
+}
+
+/* Fancy animated shine */
+.get-started-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -80px;
+    width: 60px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: skewX(-25deg);
+    transition: 0.7s;
+}
+
+.get-started-btn:hover::before {
+    left: 120%;
+}
+
+/* ====== Mobile Menu ====== */
+.gpt3__navbar-menu {
+    display: none;
+}
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+    .gpt3__navbar-links_container {
+        display: none;
+    }
+
+    .gpt3__navbar-menu {
+        display: block;
+    }
+
+    .gpt3__navbar-menu_container {
+        background: #111;
+        padding: 20px;
+        border-radius: 12px;
+        position: absolute;
+        top: 70px;
+        right: 40px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .gpt3__navbar-menu_container a {
+        color: #fff;
+        font-weight: 500;
+        font-size: 1rem;
+    }
+}
